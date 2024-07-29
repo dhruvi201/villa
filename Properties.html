@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav class="bg-gray-500 text-white px-4 py-2 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Villa</h1>
+
+      <!-- Menu Items - Hidden by default on small screens -->
+      <div class="menu-items hidden md:flex items-center space-x-4">
+        <ul class="flex space-x-4">
+          <li class="hover:underline"><a href="index.html">Home</a></li>
+          <li class="hover:underline"><a href="Properties.html">Properties</a></li>
+          <li class="hover:underline"><a href="#">Property Details</a></li>
+          <li class="hover:underline"><a href="#">Contact us</a></li>
+        </ul>
+        <ul class="flex space-x-4">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Menu Button - Visible on small screens -->
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+
+    <!-- Dropdown menu for small screens -->
+    <div id="dropdownMenu" class="md:hidden bg-gray-300 text-black hidden">
+      <ul class="flex flex-col items-center space-y-2 p-4">
+        <li class="hover:underline"><a href="#">Home</a></li>
+        <li class="hover:underline"><a href="#">Properties</a></li>
+        <li class="hover:underline"><a href="#">Property Details</a></li>
+        <li class="hover:underline"><a href="#">Contact us/li>
+      </ul>
+      <ul class="flex space-x-4 justify-center p-4">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <herosection class="relative">
+
+  <div class="relative bg-cover">
+    <img src="static/img/properties.jpg" alt="Image Description" class="w-full h-96 mt-48 object-cover">
+    <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2">
+        <button type="button" class="bg-white text-black font-bold py-2 px-4 rounded-md">HOME/PROPERTIES</button>
+    </div>
+    <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 text-center text-white">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2">PROPERTIES</h1>
+    </div>
+</div>
+
+<div class="flex flex-wrap justify-center mt-12 gap-4">
+    <button type="button" class="bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Show All</button>
+    <button type="button" class="bg-black text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Apartment</button>
+    <button type="button" class="bg-black text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Villa House</button>
+    <button type="button" class="bg-black text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Penthouse</button>
+</div>
+
+<div class="flex flex-wrap justify-center mt-12 gap-4">
+    <img src="static/img/properties1.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+    <img src="static/img/properties2.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+    <img src="static/img/properties3.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+</div>
+
+<div class="flex flex-wrap justify-center mt-12 gap-4">
+    <img src="static/img/properties4.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+    <img src="static/img/properties5.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+    <img src="static/img/properties6.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+</div>
+
+<div class="flex flex-wrap justify-center mt-12 gap-4">
+    <img src="static/img/properties7.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+    <img src="static/img/properties8.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+    <img src="static/img/properties9.jpg" alt="Image Description" class="w-64 h-64 md:w-96 md:h-96 rounded-2xl">
+</div>
+</herosection>
+
+
+  <!-- JavaScript to toggle menu visibility -->
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      // Toggle visibility of dropdown menu
+      var dropdownMenu = document.getElementById('dropdownMenu');
+      dropdownMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
